@@ -15,6 +15,7 @@ let table: Sign[][] = [[], [], []]
 
 
 function refreshState() {
+    debugger
 
 
     if (table[0][0] !== undefined) {
@@ -63,6 +64,9 @@ function refreshState() {
         //@ts-ignore
         button22?.innerHTML = table[2][2]
     }
+   
+    setTimeout(() => { checkWinner() ; }, 3);
+
 }
 
 //@ts-ignore
@@ -196,4 +200,33 @@ function clickButton22() {
         table[2][2] = "O"
         refreshState()
     }
+}
+function checkWinner (){
+    debugger
+    // if (((table [0][0] && table [0][1] && table [0][2]) === "X") ||
+    // ((table [0][0] && table [0][1] && table [0][2]) === "O")) {
+    //     alert ( table [0][0] + "win")
+    // }
+    if (((table[0][0]==="X" && table[0][1] ==="X" && table[0][2] === "X")) ||
+    ((table[0][0]=== "O" && table[0][1] ==="O" && table[0][2] === "O"))) {
+        alert ( table [0][0] + "win")
+    }
+    // if (table [1][0] && table [1][1] && table [1][2] === "X" || "O") {
+    //     alert ( table [1][0] + "win")
+    // }
+    // if (table [2][0] && table [2][1] && table [2][2] === "X" || "O") {
+    //     alert ( table [2][0] + "win")
+    // }
+    // if (table [0][0] && table [1][0] && table [2][0] === "X" || "O") {
+    //     alert ( table [0][0] + "win")
+    // }
+    // if (table [0][1] && table [1][1] && table [2][1] === "X" || "O") {
+    //     alert ( table [0][1] + "win")
+    // }
+    // if (table [0][2] && table [1][2] && table [2][2] === "X" || "O") {
+    //     alert ( table [0][2] + "win")
+    // }
+    
+
+       
 }
