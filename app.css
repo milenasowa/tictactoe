@@ -14,6 +14,32 @@ html {
           align-items: center;
 }
 
+#top-box {
+  width: 450px;
+  height: 50px;
+  background-color: aquamarine;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#top-box #box-left {
+  width: calc(100% / 2);
+  height: 100%;
+  background-color: palevioletred;
+}
+
+#top-box #box-right {
+  width: calc(100% / 2);
+  height: 100%;
+  background-color: darkorange;
+}
+
 #main {
   width: 450px;
   height: 450px;
@@ -25,6 +51,85 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+#main .line-row {
+  border-color: red;
+  background-color: red;
+  width: 400px;
+  height: 10px;
+  position: absolute;
+}
+
+#main #line-row-one {
+  margin-top: 70px;
+  margin-left: 20px;
+  display: none;
+}
+
+#main #line-row-two {
+  margin-top: 220px;
+  margin-left: 20px;
+  display: none;
+}
+
+#main #line-row-three {
+  margin-top: 370px;
+  margin-left: 20px;
+  display: none;
+}
+
+#main .line-column {
+  border-color: #59ff00;
+  background-color: lime;
+  width: 10px;
+  height: 400px;
+  position: absolute;
+}
+
+#main #line-column-one {
+  margin-top: 20px;
+  margin-left: 70px;
+  display: none;
+}
+
+#main #line-column-two {
+  margin-top: 20px;
+  margin-left: 220px;
+  display: none;
+}
+
+#main #line-column-three {
+  margin-top: 20px;
+  margin-left: 370px;
+  display: none;
+}
+
+#main .line-oblique {
+  border-color: #4800ff;
+  background-color: #4800ff;
+  position: absolute;
+}
+
+#main #line-oblique-one {
+  width: 478px;
+  height: 10px;
+  margin-top: 222px;
+  margin-left: -12px;
+  -webkit-transform: rotate(44deg);
+          transform: rotate(44deg);
+  display: none;
+}
+
+#main #line-oblique-two {
+  width: 478px;
+  height: 10px;
+  margin-top: 222px;
+  margin-left: -12px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  display: none;
 }
 
 #main .row-box {
