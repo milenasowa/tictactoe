@@ -17,15 +17,16 @@ let lineObliqueOne = document.getElementById("line-oblique-one");
 let lineObliqueTwo = document.getElementById("line-oblique-two");
 let boxLeft = document.getElementById("box-left");
 let boxRight = document.getElementById("box-right");
+let CleanGame = document.getElementById("clean-game");
 
 
 type Sign = "X" | "O";
 let lastClick: Sign = "O";
 let table: Sign[][] = [[], [], []];
 let gameContinue = true
-let punctuation :number = 0
-let informationX : string
-let informationY : string
+let punctuation: number = 0
+let informationX: string
+let informationY: string
 
 
 function refreshState() {
@@ -88,7 +89,7 @@ button00.addEventListener("click", clickButton00);
 function clickButton00() {
     //@ts-ignore    
     if (gameContinue === true) {
-        
+
         if (lastClick === "O" && table[0][0] === undefined) {
             lastClick = "X"
             table[0][0] = "X"
@@ -128,7 +129,7 @@ button02.addEventListener("click", clickButton02);
 function clickButton02() {
     //@ts-ignore
     if (gameContinue === true) {
-        
+
         if (lastClick === "O" && table[0][2] === undefined) {
             lastClick = "X"
             table[0][2] = "X"
@@ -149,7 +150,7 @@ function clickButton10() {
     //@ts-ignore
     debugger
     if (gameContinue === true) {
-        
+
         if (lastClick === "O" && table[1][0] === undefined) {
             lastClick = "X"
             table[1][0] = "X"
@@ -261,7 +262,7 @@ function clickButton22() {
             table[2][2] = "O"
             refreshState()
         }
-    }else {
+    } else {
         alert("gra zakończona")
     }
 
@@ -270,16 +271,16 @@ function checkWinner() {
 
     if (((table[0][0] === "X" && table[0][1] === "X" && table[0][2] === "X")) ||
         ((table[0][0] === "O" && table[0][1] === "O" && table[0][2] === "O"))) {
-            debugger
+
         // @ts-ignore
         lineRowOne.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][0] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][0] + " " + punctuation
-        if (table[0][0]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][0] + " " + punctuation
+        informationY = "Użytkownik" + table[0][0] + " " + punctuation
+        if (table[0][0] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][0] === "O") {
             //@ts-ignore
@@ -293,12 +294,12 @@ function checkWinner() {
         //@ts-ignore
         lineRowTwo.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[1][0] + " " + punctuation
-        informationY = "Użytkownik"+ table[1][0] + " " + punctuation
-        if (table[1][0]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[1][0] + " " + punctuation
+        informationY = "Użytkownik" + table[1][0] + " " + punctuation
+        if (table[1][0] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[1][0] === "O") {
             //@ts-ignore
@@ -311,12 +312,12 @@ function checkWinner() {
         //@ts-ignore
         lineRowThree.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[2][0] + " " + punctuation
-        informationY = "Użytkownik"+ table[2][0] + " " + punctuation
-        if (table[2][0]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[2][0] + " " + punctuation
+        informationY = "Użytkownik" + table[2][0] + " " + punctuation
+        if (table[2][0] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[2][0] === "O") {
             //@ts-ignore
@@ -329,12 +330,12 @@ function checkWinner() {
         // @ts-ignore
         lineColumnOne.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][0] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][0] + " " + punctuation
-        if (table[0][0]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][0] + " " + punctuation
+        informationY = "Użytkownik" + table[0][0] + " " + punctuation
+        if (table[0][0] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][0] === "O") {
             //@ts-ignore
@@ -346,12 +347,12 @@ function checkWinner() {
         // @ts-ignore
         lineColumnTwo.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][1] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][1] + " " + punctuation
-        if (table[0][1]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][1] + " " + punctuation
+        informationY = "Użytkownik" + table[0][1] + " " + punctuation
+        if (table[0][1] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][1] === "O") {
             //@ts-ignore
@@ -363,12 +364,12 @@ function checkWinner() {
         // @ts-ignore
         lineColumnThree.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][2] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][2] + " " + punctuation
-        if (table[0][2]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][2] + " " + punctuation
+        informationY = "Użytkownik" + table[0][2] + " " + punctuation
+        if (table[0][2] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][2] === "O") {
             //@ts-ignore
@@ -380,12 +381,12 @@ function checkWinner() {
         //@ts-ignore
         lineObliqueOne.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][0] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][0] + " " + punctuation
-        if (table[0][0]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][0] + " " + punctuation
+        informationY = "Użytkownik" + table[0][0] + " " + punctuation
+        if (table[0][0] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][0] === "O") {
             //@ts-ignore
@@ -397,12 +398,12 @@ function checkWinner() {
         //@ts-ignore
         lineObliqueTwo.style.display = 'block';
         gameContinue = false
-        punctuation = punctuation + 1 
-        informationX = "Użytkownik"+ table[0][2] + " " + punctuation
-        informationY = "Użytkownik"+ table[0][2] + " " + punctuation
-        if (table[0][2]=== "X"){
+        punctuation = punctuation + 1
+        informationX = "Użytkownik" + table[0][2] + " " + punctuation
+        informationY = "Użytkownik" + table[0][2] + " " + punctuation
+        if (table[0][2] === "X") {
             //@ts-ignore
-            boxRight?.innerHTML = informationX 
+            boxRight?.innerHTML = informationX
         }
         if (table[0][2] === "O") {
             //@ts-ignore
@@ -410,6 +411,33 @@ function checkWinner() {
         }
     }
 
-    
 
+
+}
+//@ts-ignore
+CleanGame.addEventListener("click", cleaninfo);
+
+function cleaninfo() {
+    debugger
+    table = [[], [], []]
+    //@ts-ignore
+    button00?.innerHTML = ""
+    //@ts-ignore
+    button01?.innerHTML = ""
+    //@ts-ignore
+    button02?.innerHTML = ""
+    //@ts-ignore
+    button10?.innerHTML = ""
+    //@ts-ignore
+    button11?.innerHTML = ""
+    //@ts-ignore
+    button12?.innerHTML = ""
+    //@ts-ignore
+    button20?.innerHTML = ""
+    //@ts-ignore
+    button21?.innerHTML = ""
+    //@ts-ignore
+    button22?.innerHTML = ""
+    //@ts-ignore
+    lineRowOne.style.display = 'none';
 }

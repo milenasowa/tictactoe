@@ -18,6 +18,7 @@ let lineObliqueOne = document.getElementById("line-oblique-one");
 let lineObliqueTwo = document.getElementById("line-oblique-two");
 let boxLeft = document.getElementById("box-left");
 let boxRight = document.getElementById("box-right");
+let CleanGame = document.getElementById("clean-game");
 let lastClick = "O";
 let table = [[], [], []];
 let gameContinue = true;
@@ -247,7 +248,6 @@ function clickButton22() {
 function checkWinner() {
     if (((table[0][0] === "X" && table[0][1] === "X" && table[0][2] === "X")) ||
         ((table[0][0] === "O" && table[0][1] === "O" && table[0][2] === "O"))) {
-        debugger;
         // @ts-ignore
         lineRowOne.style.display = 'block';
         gameContinue = false;
@@ -382,4 +382,30 @@ function checkWinner() {
             boxLeft === null || boxLeft === void 0 ? void 0 : boxLeft.innerHTML = informationY;
         }
     }
+}
+//@ts-ignore
+CleanGame.addEventListener("click", cleaninfo);
+function cleaninfo() {
+    debugger;
+    table = [[], [], []];
+    //@ts-ignore
+    button00 === null || button00 === void 0 ? void 0 : button00.innerHTML = "";
+    //@ts-ignore
+    button01 === null || button01 === void 0 ? void 0 : button01.innerHTML = "";
+    //@ts-ignore
+    button02 === null || button02 === void 0 ? void 0 : button02.innerHTML = "";
+    //@ts-ignore
+    button10 === null || button10 === void 0 ? void 0 : button10.innerHTML = "";
+    //@ts-ignore
+    button11 === null || button11 === void 0 ? void 0 : button11.innerHTML = "";
+    //@ts-ignore
+    button12 === null || button12 === void 0 ? void 0 : button12.innerHTML = "";
+    //@ts-ignore
+    button20 === null || button20 === void 0 ? void 0 : button20.innerHTML = "";
+    //@ts-ignore
+    button21 === null || button21 === void 0 ? void 0 : button21.innerHTML = "";
+    //@ts-ignore
+    button22 === null || button22 === void 0 ? void 0 : button22.innerHTML = "";
+    //@ts-ignore
+    lineRowOne.style.display = 'none';
 }
